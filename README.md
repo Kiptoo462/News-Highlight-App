@@ -24,7 +24,7 @@ https://github.com/Kiptoo462/News-Highlight-App.git
   ```sh
   code . or atom . (depending on your favourite text editor.)
   ```
-3. `cd` to Password-Locker folder.
+3. `cd` to News-Highlight-App folder.
 4. Launch `index.html`with browser
 
 ## Live link
