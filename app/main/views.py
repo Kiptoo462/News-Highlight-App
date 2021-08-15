@@ -1,6 +1,7 @@
 from flask import render_template,request,redirect,url_for
 # from app import app
-from . import main
+
+from .import main
 from ..request import get_newsource,get_articles, get_topheadlines, get_everything, search_article
 
 
@@ -19,7 +20,7 @@ def index():
     business_newsource = get_newsource('business')
     science_newsource = get_newsource('science')
 
-    title = 'Home | New Highlights'
+    title = 'Home | New Updates'
 
     search_article = request.args.get('article_query')
     if search_article:
@@ -51,7 +52,7 @@ def topheadlines(per_page):
 
     topheadlines_news = get_topheadlines(per_page)
 
-    title = 'Top Headlines'
+    title = 'News Headlines'
 
     search_article = request.args.get('article_query')
     if search_article:
@@ -72,7 +73,7 @@ def all_news(per_page):
     if search_article:
         return redirect(url_for('.search',article_name=search_article))
     else:
-        return render_template('everything.html', title=title, name = 'All News', articles = everything_news)
+        return render_template('everything.html', title=title, name = 'News', articles = everything_news)
 
 @main.route('/search/<article_name>')
 def search(article_name):

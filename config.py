@@ -4,11 +4,11 @@ class Config:
     '''
     General configuration parent class
     '''
-    SOURCE_API_BASE_URL ='https://newsapi.org/v2/top-headlines/sources?apiKey=API_KEY'
-    EVERYTHING_SOURCE_BASE_URL = 'https://newsapi.org/v2/top-headlines/sources?apiKey=API_KEY'
-    TOP_HEADLINES_BASE_URL = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY'
-    EVERYTHING_BASE_URL = 'https://newsapi.org/v2/everything?q=bitcoin&apiKey=b1c90d00a6e14923aed224401a3aaa61'
-    SEARCH_API_BASE_URL = 'https://newsapi.org/v2/everything?q=Apple&from=2021-08-12&sortBy=popularity&apiKey=API_KEY'
+    SOURCE_API_BASE_URL ='https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+    EVERYTHING_SOURCE_BASE_URL = 'https://newsapi.org/v2/everything?sources={}&pageSize={}&apiKey={}'
+    TOP_HEADLINES_BASE_URL = 'https://newsapi.org/v2/top-headlines?language=en&pageSize={}&apiKey={}'
+    EVERYTHING_BASE_URL = 'https://newsapi.org/v2/everything?sources=bbc-news,al-jazeera-english,cnn,independent,google-news,the-telegraph,mashable,the-lad-bible,buzzfeed,bloomberg,engadget,espn,fortune&sortBy=publishedAt&pageSize={}&apiKey={}'
+    SEARCH_API_BASE_URL = 'https://newsapi.org/v2/everything?language=en&q={}&apiKey={}'
     NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
 
 
