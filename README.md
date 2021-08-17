@@ -28,7 +28,7 @@ https://github.com/Kiptoo462/News-Highlight-App.git
 4. Launch `index.html`with browser
 
 ## Live link
-[News-Highlight-App]()
+[News-Highlight-App](https://news-updates-app.herokuapp.com/)
 
 ## BDD
      The user should be able to ;
